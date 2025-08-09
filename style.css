@@ -120,6 +120,25 @@ th {
   opacity: 0.9;
 }
 
+/* Disco text animation */
+.disco-text {
+  font-weight: bold;
+  font-size: 14px !important;
+  animation: disco-colors 3s infinite;
+  text-shadow: 0 0 10px currentColor;
+}
+
+@keyframes disco-colors {
+  0% { color: #8B4B8C; } /* Dull purple */
+  14% { color: #A66B5B; } /* Dull orange */
+  28% { color: #7A8B5B; } /* Dull green */
+  42% { color: #5B7A8B; } /* Dull blue */
+  57% { color: #8B5B7A; } /* Dull pink */
+  71% { color: #8B8B5B; } /* Dull yellow */
+  85% { color: #6B5B8B; } /* Dull indigo */
+  100% { color: #8B4B8C; } /* Back to dull purple */
+}
+
 /* Footer styles */
 footer {
   text-align: center;
