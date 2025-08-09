@@ -1,0 +1,200 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #2b2b2b;
+  color: #ffffff;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 15px;
+  background: #1e1e1e;
+  border-bottom: 1px solid #444;
+}
+
+header h1 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 12px;
+  color: #cccccc;
+}
+
+header a {
+  color: #7fb3d3;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Main layout */
+#charts {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#left {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #3a3a3a;
+  border: 1px solid #555;
+  font-size: 12px;
+}
+
+th, td {
+  padding: 4px 8px;
+  text-align: center;
+  border: 1px solid #555;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+th {
+  background: #1e1e1e;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* WoW Track color styles - keeping the WoW theme but using the grey background style */
+.explorer { background-color: #657b5c; color: #ffffff; }
+.adventurer { background-color: #555c7b; color: #ffffff; }
+.veteran { background-color: #1e5520; color: #ffffff; }
+.champion { background-color: #1e49a5; color: #ffffff; }
+.hero { background-color: #8a2ee0; color: #ffffff; }
+.myth { background-color: #a35325; color: #ffffff; }
+
+.weathered { background-color: #657b5c; color: #ffffff; }
+.carved { background-color: #555c7b; color: #ffffff; }
+.runed { background-color: #8a2ee0; color: #ffffff; }
+.gilded { background-color: #a35325; color: #ffffff; }
+.spark { background-color: #ff8000; color: #ffffff; }
+
+/* Special styling */
+.important {
+  font-weight: bold;
+}
+
+.first {
+  border-left: 2px solid #ffffff;
+}
+
+.last {
+  border-right: 2px solid #ffffff;
+}
+
+.rank {
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 5px;
+  color: #cccccc;
+  font-style: italic;
+}
+
+/* Bottom section layout */
+#bottom {
+  display: flex;
+  gap: 15px;
+}
+
+#raid {
+  flex: 2;
+}
+
+#info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #3a3a3a;
+  border: 1px solid #555;
+  padding: 15px;
+  text-align: center;
+}
+
+#info p {
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: #cccccc;
+}
+
+#info a {
+  color: #7fb3d3;
+  text-decoration: none;
+}
+
+#info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  #charts {
+    flex-direction: column;
+  }
+
+  #left {
+    flex: none;
+  }
+
+  #bottom {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  #charts {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+
+  th, td {
+    padding: 3px 6px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+}
